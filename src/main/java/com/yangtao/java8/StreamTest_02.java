@@ -3,8 +3,10 @@ package com.yangtao.java8;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.junit.Test;
 
+import javax.swing.*;
 import java.time.Period;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -90,8 +92,43 @@ public class StreamTest_02 {
 
 
     // 7 findFirst 和 findAny
+    // findFirst：返回来流中第一个元素
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @ToString
+    public static class Person {
+        private String name;
+        private String tel;
+        private String date;
+    }
 
-    
+    @Test
+    public void testFindFirst() {
+        List<Person> peopleList = Arrays.asList(
+                new Person("王二","13178520000","20210409"),
+                new Person("李二","13178520000","20230401"),
+                new Person("张四","13178520000","20220509"),
+                new Person("赵六","13178520000","20220109")
+        );
+        Person person = peopleList.stream().sorted(Comparator.comparing(Person::getDate).reversed()).findFirst().orElse(null);
 
+        System.out.println(person);
+    }
+
+    // findAny：返回流中任意一个元素，如果流为空，通过Optional对象返回一个null
+    @Test
+    public void testFindAny() {
+        //blackList是已经存在的黑名单列表
+        List<String> blackList = Arrays.asList("13378520000", "15138510000");
+//新来的手机号列表
+        List<String> phoneNumber = Arrays.asList("13378520000", "13178520000", "1238510000","15138510000","13299920000");
+
+        String s = phoneNumber.stream()
+                .filter(phone -> blackList.contains(phone))
+                .findAny()
+                .orElse(null);
+        System.out.println(s);
+    }
 
 }
