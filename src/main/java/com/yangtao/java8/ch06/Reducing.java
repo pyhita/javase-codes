@@ -1,7 +1,7 @@
 package com.yangtao.java8.ch06;
 
 import java.util.Comparator;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 import static com.yangtao.java8.ch06.Dish.menu;
 import static java.util.stream.Collectors.*;
@@ -17,6 +17,10 @@ public class Reducing {
 
     public static void main(String[] args) {
 
+        Optional<Dish> maxDish = menu.stream().collect(reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2));
+        System.out.println(maxDish.get().getCalories());
+
+        System.out.println(max().getCalories());
 
     }
 

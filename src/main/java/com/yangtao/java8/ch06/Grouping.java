@@ -17,6 +17,13 @@ public class Grouping {
 
         System.out.println(groupDishedByTypeAndCaloricLevel());
         System.out.println(caloricLevelsByType());
+
+        Map<Dish.Type, Long> map = menu.stream().collect(groupingBy(Dish::getType, counting()));
+
+        // 查找每个子组热量最高的Dish
+        Map<Dish.Type, Dish> dishMap = menu.stream().collect(groupingBy(Dish::getType,
+                collectingAndThen(maxBy(Comparator.comparing(Dish::getCalories)),
+                        Optional::get)));
     }
 
     enum CaloricLevel { DIET, NORMAL, FAT };

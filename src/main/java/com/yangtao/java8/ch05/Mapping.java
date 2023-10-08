@@ -41,5 +41,6 @@ public class Mapping {
                         numbers2.stream()
                                 .map(j -> new int[]{i, j}))
                 .collect(Collectors.toList());
+        pairs.forEach(pair -> System.out.println(Arrays.toString(pair)));
     }
 }
