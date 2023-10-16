@@ -1,4 +1,4 @@
-package com.yangtao.java8.ch11;
+package com.yangtao.java8.ch11.v2;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

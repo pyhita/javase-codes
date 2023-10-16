@@ -1,4 +1,4 @@
-package com.yangtao.java8.ch11;
+package com.yangtao.java8.ch11.v2;
 
 import java.util.Arrays;
 import java.util.List;
@@ -80,13 +80,5 @@ public class BestPriceFinder {
         CompletableFuture.allOf(futures).join();
 
     }
-
-
-
-
-
-
-
-
 
 }

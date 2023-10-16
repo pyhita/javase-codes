@@ -1,4 +1,4 @@
-package com.yangtao.java8.ch11;
+package com.yangtao.java8.ch11.v2;
 
 /**
  * @Author: kante_yang

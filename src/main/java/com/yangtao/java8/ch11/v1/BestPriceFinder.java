@@ -1,6 +1,6 @@
 package com.yangtao.java8.ch11.v1;
 
-import com.yangtao.java8.ch11.ExchangeService;
+import com.yangtao.java8.ch11.v2.ExchangeService;
 
 import java.util.Arrays;
 import java.util.List;

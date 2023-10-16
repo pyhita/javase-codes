@@ -1,9 +1,9 @@
-package com.yangtao.java8.ch11;
+package com.yangtao.java8.ch11.v2;
 
 import java.util.Random;
 
-import static com.yangtao.java8.ch11.Util.delay;
-import static com.yangtao.java8.ch11.Util.format;
+import static com.yangtao.java8.ch11.v2.Util.delay;
+import static com.yangtao.java8.ch11.v2.Util.format;
 
 /**
  * @Author: kante_yang

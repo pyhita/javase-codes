@@ -1,6 +1,6 @@
-package com.yangtao.java8.ch11;
+package com.yangtao.java8.ch11.v2;
 
-import static com.yangtao.java8.ch11.Util.delay;
+import static com.yangtao.java8.ch11.v2.Util.delay;
 
 /**
  * @Author: kante_yang
