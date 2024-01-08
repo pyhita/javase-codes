@@ -1,4 +1,4 @@
-package com.yangtao.java_version.java8.java8_test;
+package com.yangtao.java_version.java8.java8_test.d_completablefuture;
 
 import java.util.concurrent.CompletableFuture;
 import org.junit.Test;

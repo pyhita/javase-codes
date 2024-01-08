@@ -1,4 +1,4 @@
-package com.yangtao.java_version.java8.java8_in_action.ch05;
+package com.yangtao.java_version.java8.java8_test.b_stream.a_middle;
 
 /**
  * @Author: kante_yang
